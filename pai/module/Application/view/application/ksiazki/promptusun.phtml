@@ -1,0 +1,8 @@
+<h1>Czy usunąć tą książkę?</h1>
+
+<h3>Id: <?= $ksiazka->id ?> </h3>
+<h3>Tytuł: <?= $ksiazka->tytul ?> </h3>
+            <a href="<?= $this->url('ksiazki', ['action' => 'usun', 'id' => $ksiazka->id]) ?>"
+                title="TAK"><strong>TAK</strong></a>
+            <a href="<?= $this->url('ksiazki', ['action' => 'lista']) ?>"
+                title="NIE"><strong>NIE</strong></a>

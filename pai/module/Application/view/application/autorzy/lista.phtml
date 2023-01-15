@@ -1,0 +1,29 @@
+<h1>Lista książek</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->autorzy as $at): ?>
+        <tr>
+            <td><?= $at->id ?></td>
+            <td><?= $at->imie ?></td>
+            <td><?= $at->nazwisko ?></td>
+            <td>
+                <a href="<?= $this->url('autorzy', ['action' => 'edytuj', 'id' => $at->id]) ?>" title="edytuj rekord">edytuj</a>
+                <a href="<?= $this->url('autorzy', ['action' => 'szczegoly', 'id' => $at->id]) ?>" title="szczegoly rekord">szczegóły</a>
+                <a
+                        href="<?= $this->url('autorzy', ['action' => 'promptusun', 'id' => $at->id]) ?>"
+                        title="usuń rekord"
+                >usuń</i></a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<h1><?= $tytul ?></h1>
+
+<div class="row">
+    <div class="col-lg-4">
+        <?= $this->form()->openTag($form) ?>
+
+        <div class="form-group">
+            <?= $this->formLabel($form->get('imie')) ?>
+            <?= $this->formText($form->get('imie')) ?>
+            <?= $this->formElementErrors($form->get('imie'), ['class' => 'help-block']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->formLabel($form->get('nazwisko')) ?>
+            <?= $this->formText($form->get('nazwisko')) ?>
+            <?= $this->formElementErrors($form->get('nazwisko'), ['class' => 'help-block']) ?>
+        </div>
+
+        <?= $this->formSubmit($form->get('zapisz')) ?>
+
+        <?= $this->form()->closeTag($form) ?>
+    </div>
+</div>

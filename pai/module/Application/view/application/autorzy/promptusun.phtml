@@ -1,0 +1,12 @@
+<h1>Czy usunąć autora?</h1>
+
+<h3>Nazwisko: <?= $autor->nazwisko ?> </h3>
+<h3>Imię: <?= $autor->imie ?></h3>
+            <a href="<?= $this->url('autorzy', ['action' => 'usun', 'id' => $autor->id]) ?>"
+                title="TAK"><strong>TAK</strong></a>
+            <a href="<?= $this->url('autorzy', ['action' => 'lista']) ?>"
+                title="NIE"><strong>NIE</strong></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
